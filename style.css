@@ -307,10 +307,12 @@ a{text-decoration:none}
     margin: 20px 0;
 }
 
-.inf-mem i{
+.inf-mem a{
     color:#fff;
-    font-size: 25px;
+    font-size:25px;
 }
+
+
 
 .member-list ul{
 
