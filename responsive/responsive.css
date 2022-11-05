@@ -9,6 +9,13 @@
     .letter{
         text-align: center;
     }
+
+    .info{
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (min-width:1024px){
@@ -65,7 +72,7 @@
     }
 
     .body1 h1{
-        font-size:40px;
+        font-size:7vw;
         
     }
 
@@ -95,4 +102,6 @@
     .info{
         flex-wrap: wrap;
     }
+
+
 }
