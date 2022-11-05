@@ -11,8 +11,6 @@ li{
 a{text-decoration:none}
 
 .wrapper{
-    max-width: 100%;
-    margin:auto;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -25,6 +23,10 @@ a{text-decoration:none}
     align-items: center;
     padding :0 20px;
     
+}
+
+.menubar > i{
+    font-size: 30px;
 }
 
 .menu-list ul{
@@ -55,7 +57,7 @@ a{text-decoration:none}
     top:50%;
     left:15%;
     transform :translate(0,-50%);
-    width: 600px;
+    
 }
 
 .desc p{
@@ -146,7 +148,7 @@ a{text-decoration:none}
 }
 
 .body2 > p{
-    padding: 0 425px;
+    /* padding: 0 425px; */
     line-height: 2;
     opacity: 0.5;
 }
@@ -191,7 +193,7 @@ a{text-decoration:none}
 }
 
 .tag-list a { 
-    padding: 20px 60px;
+    padding: 20px 10%;
     background-color:#daffdc;
     border-radius: 30px;
     color: #000;    
@@ -438,6 +440,8 @@ a{text-decoration:none}
     background-color:#fd7e14;
     color:#fff;
 }
+
+
 
 @keyframes updown{
     0%{
