@@ -174,11 +174,64 @@ a{
     color:#fff;
 }
 
+.num1{
+    color:#fff;
+}
+
+#footer{
+    background-image: url('./shopping_img/bg5.jpeg');
+    padding:40px 150px;
+
+}
+
 #footer .footer-row{
     display: flex;
-    justify-content: center;
-    
+    justify-content:space-between;
+    align-items:center;
+    gap:90px;
 }
 #footer .footer-title{
     align-items: center;
+}
+
+.footer-text{
+    margin-top: 20px;
+    line-height:1.6;
+}
+
+
+.footer-text h5{
+    font-size: 20px;
+}
+
+.footer-row1,
+.footer-row2,
+.footer-row3{
+    width: calc(100%/3);
+}
+
+.footer-img ul{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.footer-img{
+    margin-top:20px;
+}
+
+.footer-row h4{
+    font-size: 25px;
+    position: relative;
+    margin-bottom:30px;
+}
+
+.footer-row h4::before{
+    content:"";
+    position: absolute;
+    width:60px;
+    height:4px;
+    background-color:#ef8829;
+    bottom:-10px;
+
 }
