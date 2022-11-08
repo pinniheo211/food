@@ -173,3 +173,12 @@ a{
 .nextpage li:hover a{
     color:#fff;
 }
+
+#footer .footer-row{
+    display: flex;
+    justify-content: center;
+    
+}
+#footer .footer-title{
+    align-items: center;
+}
