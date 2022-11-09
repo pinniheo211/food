@@ -1,10 +1,13 @@
 <?php
-    $connect = mysqli_connect('localhost','root','','Quanlymonan');
-    if($connect){
-        mysqli_query($connect,"SET NAMES 'UTF8'");
-        echo 'ket noi thanh cong';
-    }else{
-        echo 'ket noi that bai';
-    }
+    $servername ="localhost";
+    $username = "root";
+    $password = "";
+    $database = "Quanlymonan";
 
+    $conn = mysqli_connect($servername, $username, $password,$database);
+    if(!$conn){
+        echo ("ket noi ko thanh cong");
+    }else{
+        echo ("ket noi thanh cong"); 
+    }
 ?>
