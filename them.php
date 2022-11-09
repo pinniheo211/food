@@ -23,13 +23,14 @@
             
             if($conn -> query("INSERT INTO `monan`(`id`, `tenmonan`, `mota`, `tien`, `hinhanh`) VALUES ('$id','$tenmonan','$mota','$tien','$hinhanh')" )){
                 echo "<script>alert('them thanh cong !')</script>";
+                header('location:quanly.php?page_layout=danhsach');
 
 
             }else{
                 echo "<script>alert('them that bai!')</script>";
             }
         }
-        $conn -> close();
+        
     
     ?>
 
@@ -38,26 +39,26 @@
         <form method="POST" action="">
             <div class="form-group">
                 <label for="id">id</label>
-                <input type="text" name="id" class="form-control" placeholder="nhap id">
+                <input type="text" name="id" class="form-control" placeholder="nhap id" required>>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="tenmonan">ten mon an</label>
-                <input name="tenmonan" class="form-control" placeholder="nhap ten san pham">
+                <input name="tenmonan" class="form-control" placeholder="nhap ten san pham" required>
             </div>
             <div class="form-group">
                 <label for="mota">chi tiet san pham</label>
-                <input name="mota" class="form-control" placeholder="chi tiet san pham">
+                <input name="mota" class="form-control" placeholder="chi tiet san pham"required>
             </div>
             <div class="form-group">
                 <label for="tien">so tien</label>
-                <input name="tien" class="form-control" placeholder="so tien">
+                <input name="tien" class="form-control" placeholder="so tien"required>
             </div>
             <div class="form-group">
                 <label for="hinhanh">hinh anh</label>
-                <input name="hinhanh" class="form-control" placeholder="hinh anh san pham">
+                <input type="file" name="hinhanh" class="form-control"required>
             </div>
-            <button type="submit" class="btn btn-primary" name="add">Them</button>
+            <button  type="submit" class="btn btn-primary" name="add">them</button>
         </form>
     </div>
 </body>

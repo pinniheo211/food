@@ -1,5 +1,8 @@
 <?php
-
-    echo "<h1>xoa</h1>"
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM `monan` WHERE `id` = $id";
+    $query = mysqli_query($conn,$sql);
+    header('location:quanly.php?page_layout=danhsach');
+    
 
 ?>

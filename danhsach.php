@@ -31,8 +31,13 @@
                                             
                                         </td>
 
-                                        <td>sua</td>
-                                        <td>xoa</td>
+                                        <td>
+                                            <a href="quanly.php?page_layout=sua&id=<?php $row['id']; ?>">sua</a>
+                                        </td>
+                                        <td>
+                                            <a href="quanly.php?page_layout=xoa&id=<?php $row['id']; ?>">xoa</a>
+
+                                        </td>
                                     </tr>
                             <?php } ?>
 
@@ -40,6 +45,7 @@
                         </tbody>
                     </thead>
                 </table>
+                <a class="btn btn-primary" href="quanly.php?page_layout=them">Them moi</a>
             </div>
         </div>
     </div>
