@@ -13,6 +13,8 @@
     <?php
 
     require_once 'config/conn.php'?>
+    
+
     <?php
         if(isset($_POST['add'])){
             $id = $_POST["id"];
