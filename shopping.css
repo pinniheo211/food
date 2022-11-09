@@ -173,11 +173,14 @@ a{
 .nextpage li:hover a{
     color:#fff;
 }
-
-#footer .footer-row{
+#footer{
     display: flex;
     justify-content: center;
-    
+    width: 100%;
+    height: 400px;
+    background-image: url(https://shtheme.com/demosd/orgafe/wp-content/themes/orgafe/img/bg/bg5.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 #footer .row ul{
     list-style: none;
@@ -185,5 +188,20 @@ a{
 #footer .row{
     padding-top: 50px;
     margin: 0 100px;
+}
+
+
+
+#footer .row h2{
     
+    border-bottom: 2px solid orangered;
+}
+#footer .text{
+    margin-top: 20px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+#footer .footer-title{
+    
+    font-family:'Rubik', sans-serif ;
 }
