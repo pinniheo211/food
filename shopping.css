@@ -44,7 +44,7 @@ a{
 
 .menu-list ul{
     display:flex;
-    gap: 10px;
+    gap: 40px;
 }
 .menu-list li a{
     color:#000;
