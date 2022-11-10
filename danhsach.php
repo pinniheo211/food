@@ -1,19 +1,19 @@
 <div class="container-fluid">
         <div class="card">
-            <div class="card-header">
-                <h2>Danh sach san pham</h2>
+            <div class="card-header text-center">
+                <h2>Danh sách sản phẩm</h2>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>ten mon an</th>
-                            <th>chi tiet mon an</th>
-                            <th>so tien</th>
-                            <th>hinh anh</th>
-                            <th>sua</th>
-                            <th>xoa</th>
+                            <th>tên món ăn</th>
+                            <th>chi tiết món ăn</th>
+                            <th>số tiền</th>
+                            <th>hình ảnh</th>
+                            <th>sửa</th>
+                            <th>xoá</th>
 
                         </tr>
                         <tbody >
@@ -32,10 +32,10 @@
                                         </td>
 
                                         <td>
-                                            <a class="btn btn-success" href="quanly.php?page_layout=sua&id=<?php echo $row['id']; ?>">sua</a>
+                                            <a class="btn btn-success" href="quanly.php?page_layout=sua&id=<?php echo $row['id']; ?>">sửa</a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger" onclick ="return Del('<?php echo $row['id']; ?>')" href="quanly.php?page_layout=xoa&id=<?php echo $row['id']; ?>">xoa</a>
+                                            <a class="btn btn-danger" onclick ="return Del('<?php echo $row['id']; ?>')" href="quanly.php?page_layout=xoa&id=<?php echo $row['id']; ?>">xoá</a>
 
                                         </td>
                                     </tr>
@@ -47,8 +47,8 @@
                 </table>
                 <div class="container mt-5">
                     <div class="row justify-content-between">
-                        <a class="btn btn-primary" href="quanly.php?page_layout=them">Them moi</a>
-                        <a class="btn btn-primary" href="quanly.php?page_layout=shopping">Luu</a>
+                        <a class="btn btn-primary" href="quanly.php?page_layout=them">Thêm mới</a>
+                        <a class="btn btn-primary" href="quanly.php?page_layout=shopping">Lưu</a>
                         
                     </div>
 
