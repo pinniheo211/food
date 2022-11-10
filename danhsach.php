@@ -16,11 +16,11 @@
                             <th>xoa</th>
 
                         </tr>
-                        <tbody>
+                        <tbody >
                             <?php
                             $i =1;
                                 while($row = mysqli_fetch_assoc($query)){?>
-                                    <tr>
+                                    <tr >
                                         <td><?php echo $row['id']; ?></td>
                                         <td><?php echo $row['tenmonan']; ?></td>
                                         <td><?php echo $row ['mota'];  ?></td>
@@ -32,10 +32,10 @@
                                         </td>
 
                                         <td>
-                                            <a href="quanly.php?page_layout=sua&id=<?php echo $row['id']; ?>">sua</a>
+                                            <a class="btn btn-success" href="quanly.php?page_layout=sua&id=<?php echo $row['id']; ?>">sua</a>
                                         </td>
                                         <td>
-                                            <a onclick ="return Del('<?php echo $row['id']; ?>')" href="quanly.php?page_layout=xoa&id=<?php echo $row['id']; ?>">xoa</a>
+                                            <a class="btn btn-danger" onclick ="return Del('<?php echo $row['id']; ?>')" href="quanly.php?page_layout=xoa&id=<?php echo $row['id']; ?>">xoa</a>
 
                                         </td>
                                     </tr>
@@ -45,7 +45,15 @@
                         </tbody>
                     </thead>
                 </table>
-                <a class="btn btn-primary" href="quanly.php?page_layout=them">Them moi</a>
+                <div class="container mt-5">
+                    <div class="row justify-content-between">
+                        <a class="btn btn-primary" href="quanly.php?page_layout=them">Them moi</a>
+                        <a class="btn btn-primary" href="quanly.php?page_layout=shopping">Luu</a>
+                        
+                    </div>
+
+                </div>
+                
             </div>
         </div>
     </div>

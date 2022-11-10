@@ -26,7 +26,7 @@
                     <li><a href="">About</a></li>
                     <li><a href="">Service</a></li>
                     <li><a href="">Blog</a></li>
-                    <li><a href="./shopping.html">Shop</a></li>
+                    <li><a href="quanly.php?page_layout=shopping">Shop</a></li>
                     <li><a href="">Page</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>

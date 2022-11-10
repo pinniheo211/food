@@ -35,12 +35,14 @@
     ?>
 
     <div class="container">
-
-        <form method="POST" action="">
+        <div class="card-header text-center mb-5">
+            <h2>Danh sach san pham</h2>
+        </div>
+        <form  method="POST" action="">
             <div class="form-group">
                 <label for="id">id</label>
-                <input type="text" name="id" class="form-control" placeholder="nhap id" required>>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="text" name="id" class="form-control" placeholder="nhap id" required>
+                
             </div>
             <div class="form-group">
                 <label for="tenmonan">ten mon an</label>
@@ -58,7 +60,10 @@
                 <label for="hinhanh">hinh anh</label>
                 <input type="file" name="hinhanh" class="form-control"required>
             </div>
-            <button  type="submit" class="btn btn-primary" name="add">them</button>
+            <div class="container d-flex justify-content-center">
+                <button  type="submit" class="btn btn-primary mt-5 px-5 py-2  " name="add">them</button>
+
+            </div>
         </form>
     </div>
 </body>

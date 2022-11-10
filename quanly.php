@@ -40,6 +40,9 @@ require_once 'config/conn.php'?>
                 case 'shopping':
                     require_once 'shopping.php';
                     break;
+                case 'index':
+                    require_once 'index.php';
+                    break;
                 default:
                     require_once 'danhsach.php';
                     break;
