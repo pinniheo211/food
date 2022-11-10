@@ -32,10 +32,10 @@
                                         </td>
 
                                         <td>
-                                            <a href="quanly.php?page_layout=sua&id=<?php $row['id']; ?>">sua</a>
+                                            <a href="quanly.php?page_layout=sua&id=<?php echo $row['id']; ?>">sua</a>
                                         </td>
                                         <td>
-                                            <a href="quanly.php?page_layout=xoa&id=<?php $row['id']; ?>">xoa</a>
+                                            <a onclick ="return Del('<?php echo $row['id']; ?>')" href="quanly.php?page_layout=xoa&id=<?php echo $row['id']; ?>">xoa</a>
 
                                         </td>
                                     </tr>
@@ -49,3 +49,9 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function Del(name){
+            return confirm("ban co chac muon xoa san pham " + name +"?");
+        }
+    </script>
