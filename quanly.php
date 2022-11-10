@@ -37,6 +37,9 @@ require_once 'config/conn.php'?>
                 case 'xoa':
                     require_once 'xoa.php';
                     break;
+                case 'shopping':
+                    require_once 'shopping.php';
+                    break;
                 default:
                     require_once 'danhsach.php';
                     break;

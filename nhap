@@ -1,0 +1,70 @@
+<div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>
+                    <div class="item">
+                        <img style="width:100%;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <h3><?php echo $row['tenmonan']; ?></h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> k</p>
+                    </div>

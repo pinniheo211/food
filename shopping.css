@@ -93,10 +93,7 @@ a{
 }
 
 .showing {
-    margin-bottom:50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align:center;
 }
 
 .showing p{
@@ -202,3 +199,5 @@ a{
     
     font-family:'Rubik', sans-serif ;
 }
+
+
