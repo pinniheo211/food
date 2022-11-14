@@ -43,6 +43,9 @@ require_once 'config/conn.php'?>
                 case 'index':
                     require_once 'index.php';
                     break;
+                case 'login':
+                    require_once 'login.php';
+                    break;
                 default:
                     require_once 'danhsach.php';
                     break;
