@@ -46,8 +46,11 @@ require_once 'config/conn.php'?>
                 case 'login':
                     require_once 'login.php';
                     break;
+                case 'dangky';
+                    require_once 'dangky.php';
+                    break;
                 default:
-                    require_once 'danhsach.php';
+                    require_once 'login.php';
                     break;
             }
             

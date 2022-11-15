@@ -1,36 +1,12 @@
 *{
     padding:0;
     margin:0;
-    box-sizing: border-box;
 }
 
-.main {
-    /* text-align:center; */
-    display: flex;
+
+.form-log{
+    display:flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: column;
-    height: 400px;
-    text-align: center;
-}
 
-.main h2{
-    margin-bottom: 40px;
-}
-
-.form-login{
-    display:flex;
-    margin:0 auto;
-}
-
-.form-login form{
-    display:flex;
-    flex-direction: column;
-}
-
-.form-login input[type="submit"]{
-    margin-top: 40px;
-}
-
-.form-login input[type="text"]{
-    margin-bottom: 20px;
 }
