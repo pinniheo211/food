@@ -7,7 +7,14 @@ require_once 'config/conn.php';
                             header('location:quanly.php?page_layout=login');
                         }
                         $_SESSION['user'];
-
+                        // $_admin = header('location:quanly.php?page_layout=danhsach');
+                        // if($_SESSION['role']==1){
+                        //     $_admin = true;
+                        // }
+                        // else{
+                        //     $_admin = false;
+                        // }
+                        // $_SESSION['role'];
 
 ?>
 
@@ -27,7 +34,7 @@ require_once 'config/conn.php';
     <link rel="stylesheet" href="shopping.css">
 <style>
     .item p{
-        height:70px;
+        height:11px;
     }
     .item{
 
@@ -37,7 +44,20 @@ require_once 'config/conn.php';
     .list-items{
         margin-top:40px;
     }
-    
+    .wrapper{
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+    }
+    #footer{
+        scroll-snap-align: center;
+        height:100%;
+    }
+
+    .row{
+        width:61%;
+    }
+
 </style>
 </head>
 <body>
@@ -49,11 +69,8 @@ require_once 'config/conn.php';
                 </div>
                 <div class="menu-list">
                     <ul>
-                        <li><a href="quanly.php?page_layout=index">Home</a></li>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Home</a></li>
+                        <li><a href="quanly.php?page_layout=index">HOME</a></li>
+                        <li><a href="#footer">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -81,7 +98,12 @@ require_once 'config/conn.php';
                         <img style="height:198px;width:100%; margin-bottom: 30px;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
                         <h3><?php echo $row['tenmonan']; ?></h3>
                         <p ><?php echo $row['mota']; ?></p>
-                        <p><?php echo $row ['tien']; ?> k</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p><?php echo $row ['tien']; ?> VND</p>
+                        <a  class="btn btn-warning my-3 px-4"  href="">Mua</a>
                     </div>
                     <!-- <div class="item">
                         <img style="width:100%;" src="" alt="">
@@ -167,12 +189,7 @@ require_once 'config/conn.php';
                 <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/04/logo.png" alt="">
             </div>
             <div class="text">
-                <P>Lorem ipsum dolor amet 
-                    coadipisicing elit sed do <br>
-                     eiusmod tempor incididunt <br>
-                     ut labore et dolore magna aliqua. <br>
-                     Ut enim ad minim veniam quis nostrud <br>
-                      exercitation ullamco laboris nisi ut.</P>
+                <P>If you are searching for great tasting, healthy meal plans in Saigon, we have a selection of dishes that will keep you energetic during the week. Our extensive menu is good for about 45 days without repeating a combination.
                 
             </div>
         
@@ -181,30 +198,28 @@ require_once 'config/conn.php';
             <div class="footer-title"><h2>CONTRACT INFO</h2></div>
            <div class="text">
             <i class="fa-solid fa-location-dot">  LOCATION</i>
-            <p>205 Olazu Familia, Herba
-                Street Front USA</p>
+            <p>16/5 Mai Xuân Thương , Phường 11 , Quận Bình Thạnh , TP Hồ Chí Minh</p>
             <i class="fa-solid fa-envelope">  EMAIL US</i>
             <p>support@gmail.com</p>
             <i class="fa-solid fa-headphones">  CALL US</i>
-            <p>002- 01008431112</p>
+            <p>0901328277</p>
             
            </div>
         </div>
         <div class="row">
             <div class="footer-title"><h2 class="hh2">OUR GALLERY</h2></div>
            
-          <div class="text">
-            <div class="icon">
-
-                <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram1.jpg" alt="">
+            <div class="text">
+                <div class="icon">
+                    <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram1.jpg" alt="">
                     <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram2.jpg" alt="">
-                    <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram3.jpg" alt=""><br>
+                    <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram3.jpg" alt="">
                     <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram4.jpg" alt="">
                     <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram5.jpg" alt="">
                     <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/05/instagram6.jpg" alt="">
             
-       </div>
-          </div>
+                </div>
+            </div>
             
         </div>
         
@@ -212,3 +227,4 @@ require_once 'config/conn.php';
     
 </body>
 </html>
+

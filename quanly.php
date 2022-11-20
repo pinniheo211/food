@@ -23,16 +23,32 @@ require_once 'config/conn.php'?>
         if(isset($_GET['page_layout'])){
             switch ($_GET['page_layout']){
                 case 'danhsach':
-
-                    require_once 'danhsach.php';
+                    session_start();
+                    if($_SESSION['role']==1){
+                        require_once 'danhsach.php';
+                    }else{
+                        require_once 'error.php';
+                    }
                     break;
 
                 case 'them':
-                    require_once 'them.php';
+                    session_start();
+                    if($_SESSION['role']==1){
+                        require_once 'them.php';
+                    }else{
+                        require_once 'error.php';
+
+                    }
                     break;
 
                 case 'sua':
-                    require_once 'sua.php';
+                    session_start();
+                    if($_SESSION['role']==1){
+                        require_once 'sua.php';
+                    }else{
+                        require_once 'error.php';
+
+                    }
                     break;
 
                 case 'xoa':

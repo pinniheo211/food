@@ -6,11 +6,21 @@
             <div class="card-body">
                 <table class="table">
                     <?php 
-                        session_start();
+                        // session_start();
                         if(isset($_SESSION['user'])==""){
                             header('location:quanly.php?page_layout=login');
                         }
                         $_SESSION['user'];
+                        
+                        // if(isset($_SESSION['role'])){
+
+                        //     $_SESSION['role'];
+                        // }
+                        // $_admin = header('location:quanly.php?page_layout=danhsach');
+                        // if($_SESSION['role']==0){
+                        //     $_admin= header("location:quanly.php?page_layout=index");
+                        // }
+                    
                     ?>
                     <thead>
                         <tr>

@@ -1,5 +1,5 @@
 <?php 
-                        session_start();
+                        // session_start();
                         if(isset($_SESSION['user'])==""){
                             header('location:quanly.php?page_layout=login');
                         }
@@ -21,13 +21,12 @@
  
     <?php
         if(isset($_POST['add'])){
-            $id = $_POST["id"];
             $tenmonan =$_POST["tenmonan"];
             $mota = $_POST["mota"];
             $tien = $_POST["tien"];
             $hinhanh = $_POST["hinhanh"];
             
-            if($conn -> query("INSERT INTO `monan`(`id`, `tenmonan`, `mota`, `tien`, `hinhanh`) VALUES ('$id','$tenmonan','$mota','$tien','$hinhanh')" )){
+            if($conn -> query("INSERT INTO `monan`( `tenmonan`, `mota`, `tien`, `hinhanh`) VALUES ('$tenmonan','$mota','$tien','$hinhanh')" )){
                 echo "<script>alert('them thanh cong !')</script>";
                 header('location:quanly.php?page_layout=danhsach');
 
@@ -45,11 +44,6 @@
             <h2>Danh sach san pham</h2>
         </div>
         <form  method="POST" action="">
-            <div class="form-group">
-                <label for="id">id</label>
-                <input type="text" name="id" class="form-control" placeholder="nhap id" required>
-                
-            </div>
             <div class="form-group">
                 <label for="tenmonan">ten mon an</label>
                 <input name="tenmonan" class="form-control" placeholder="nhap ten san pham" required>

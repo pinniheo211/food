@@ -16,40 +16,83 @@ require_once 'config/conn.php'?>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    html {
+  scroll-behavior: smooth;
+}
+    .member-list img{
+        width:320px; 
+        height:350px;
+        object-fit:cover;
+
+    }
+    .up{
+        padding:10px 15px;
+        border-radius:100%;
+        background-color:#28a745;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        z-index: 3;
+    }
+    .up i{
+        color:#fff;
+    }
+ 
+
+</style>
 </head>
 <body>
     <div class="wrapper">
-    
-        <div class="menubar">
+        <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        <div class="menubar" id="home">
             <div class="logo">
                 <a href=""><img src="./img/logo.png" alt=""></a>
             </div>
 
             <div class="menu-list">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Service</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="quanly.php?page_layout=shopping">Shop</a></li>
-                    <li><a href="">Page</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About </a></li>
+                    <li><a href="quanly.php?page_layout=shopping">Menu</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <?php 
+                        session_start();
+                            // if($_SESSION['role']==1){
+                            //     $_SESSION['role']="quan ly danh sach";
+                            // }
+                            // if($_SESSION['role']==0){
+                            //     $_SESSION['role']="";
+                            // }
+                            // $_SESSION['role'];
+                        ?>
+                    <li><a href="quanly.php?page_layout=danhsach"><?php
+                    if($_SESSION['role']==1){
+                        echo "management";
+                    }
+                    else{
+                        echo "";
+
+                    }
+                    ?>
+                </a></li>
                 </ul>
             </div>
             <div class="user d-flex flex-column align-items-center ">
                         <?php
-                            session_start();
                             if(isset($_SESSION['user'])==""){
                                 header("location:quanly.php?page_layout=login");
                             }
+                            $_SESSION['user'];
+
                         ?>
-                        <h6 class="text-uppercase">Xin chao : <?php echo $_SESSION['user']; ?></h6>
+                        <h6 class="text-uppercase">Welcome : <?php echo $_SESSION['user']; ?></h6>
 
                 
 
 
                 
-                <a class="btn btn-danger btn-sm" href="quanly.php?page_layout=logout"> Dang xuat</a>
+                <a class="btn btn-danger btn-sm" href="quanly.php?page_layout=logout">Logout</a>
             </div>
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -58,30 +101,29 @@ require_once 'config/conn.php'?>
         <div class="slider">
             <img src="./img/sl1 (1).png" alt="">
             <div class="desc">
-                <p>EXTRA 50% OFF FOR ALL WINTER PRODUCT</p>
-                <h1>Build Your Health Eating Orgafe</h1>
-                <a href="">OUR SERVICE</a>
+                <h1>Build Your Health Eating</h1>
+                <a href="#menu">OUR MENU</a>
             </div>
             
         </div>
 
         <!-- BODY -->
-        <div class="body">
+        <div class="body" id="about">
             <!-- body1 -->
             <div class="body1">
-                <div class="img">
+                <div class="img" style="z-index:1;">
                     <img src="./img/about1.png" alt="">
                 </div>
                 <div class="farm">
-                    <h1>The Best Trusted Farms For You</h1>
+                    <h1>The best choice for you</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repudiandae consequatur mollitia minus perspiciatis autem quis. Unde voluptatum harum, minima porro ipsum tempore quibusdam molestias fugiat enim laudantium corrupti doloribus.</p>
                     <div class="feature">
                         <div class="icon">
                             <img src="./img/fea1.png" alt="">
                         </div>
                         <div class="feature-text">
-                            <h4>Natural Foods</h4>
-                            <p>Lorem ipsum dolor conse ctetur adipisicing elit sed do eiusmo temincididunt labore apericons</p>
+                            <h4>Natural food</h4>
+                            <p>Food extracts from natural various fruits. Ensuring food quality and safety</p>
                         </div>
                     </div>
                     <div class="feature">
@@ -89,23 +131,15 @@ require_once 'config/conn.php'?>
                             <img src="./img/fea2.png" alt="">
                         </div>
                         <div class="feature-text">
-                            <h4>Natural Foods</h4>
-                            <p>Lorem ipsum dolor conse ctetur adipisicing elit sed do eiusmo temincididunt labore apericons</p>
+                            <h4>No harmful substances</h4>
+                            <p> do not add any kind of Artificial Preservatives and/or Preservatives</p>
                         </div>
                     </div>
-                    <div class="feature">
-                        <div class="icon">
-                            <img src="./img/fea3.png" alt="">
-                        </div>
-                        <div class="feature-text">
-                            <h4>Natural Foods</h4>
-                            <p>Lorem ipsum dolor conse ctetur adipisicing elit sed do eiusmo temincididunt labore apericons</p>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <!-- body 2 -->
-            <div class="body2">
+            <!-- <div class="body2">
                 <img src="./img/icon2.png" alt="">
                 <h3>Our Service</h3>
                 <p>Lorem ipsum dolor sit amet consectutur adipisicing elit sed do eiusmotempor incididunt labore dolore magna aliqua minim veniam</p>
@@ -130,52 +164,54 @@ require_once 'config/conn.php'?>
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
             <!-- BODY 3 -->
-            <div class="body2 body3" style="background-image:none;">
+            <div class="body2 body3" id="menu">
                 <img src="./img/pro1.png" alt="" class="img1 imgpos">
                 <img src="./img/pro1.png" alt="" class="img2 imgpos">
                 <img src="./img/pro1.png" alt="" class="img3 imgpos">
                 <img src="./img/pro1.png" alt="" class="img4 imgpos">
                 <img src="./img/icon8.png" alt="">
-                <h3>Our Product</h3>
-                <p>Lorem ipsum dolor sit amet s=consectetur adipisicing elit sed do eiumotempor incididunt labore magna minim veniam</p>
+                <h3>Our Products</h3>
+                <p>The best option for you to eat</p>
+
+                
                 <div class="list-items-info">
                     <div class="list-items">
-                        <img src="./img/product1.png" alt="">
+                        <img src="./shopping_img/" alt="">
                         <h4>NATURE WATERMELON</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>$43.00</p>
+                        <p>43000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./img/product1.png" alt="">
+                        <img src="./shopping_img/" alt="">
                         <h4>NATURE WATERMELON</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>$43.00</p>
+                        <p>43000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./img/product1.png" alt="">
+                        <img src="./shopping_img/" alt="">
                         <h4>NATURE WATERMELON</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>$43.00</p>
+                        <p>43000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./img/product1.png" alt="">
+                        <img src="./shopping_img/" alt="">
                         <h4>NATURE WATERMELON</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>$43.00</p>
+                        <p>43000VND</p>
                     </div>
                 </div>
                 <a class="btn-view" href="">VIEW ALL</a>
@@ -185,82 +221,57 @@ require_once 'config/conn.php'?>
             <div class="body2 body4">
                 <img src="./img/icon5.png" alt="">
                 <h3>Members of Team</h3>
-                <p>Lorem ipsum dolor sit amet s=consectetur adipisicing elit sed do eiumotempor incididunt labore magna minim veniam</p>
                 <div class="member-list">
                     <ul>
                         <li>
-                            <img src="./img/team1.jpeg" alt="">
+                            <img class="rounded" src="./img/trancuong.jpg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
-                                <p>Tran Chi Cuong</p>
-                                <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                                <p>Trần Chí Cường</p>
+                                
                             </div>
                         </li>
                         <li>
-                            <img src="./img/team1.jpeg" alt="">
+                            <img class="rounded" src="./img/team1.jpeg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
-                                <p>Tran Chi Cuong</p>
-                                <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                                <p>Nguyễn Bảo Khanh</p>
+                                
                             </div>
                         </li>
                         <li>
-                            <img src="./img/team1.jpeg" alt="">
+                            <img class="rounded" src="./img/team1.jpeg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
-                                <p>Tran Chi Cuong</p>
-                                <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                </ul>
+                                <p>Võ Duy Minh Quân</p>
+                                
                             </div>
                         </li>
                     </ul>
                 </div>
-                <a href="" class="btn-see">SEE ALL MEMBERS</a>
             </div>
 
             <!-- footer -->
-            <div class="footer">
+            <div class="footer" id="footer">
                 <div class="contact-logo">
                     <div class="logo">
                         <img src="./img/logo.png" alt="">
                     </div>
                     <div class="social-list">
                         <ul>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-facebook  text-secondary"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram text-secondary"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter text-secondary"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-telegram text-secondary"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="info">
                     <div class="about">
                         <h2>About Us</h2>
-                        <p>Lorem ipsum dolor amet coadipisicing elit sed do eiusmod tempor</p>
-                        <div>
+                        <p>my goal is to provide you with lots of high-quality recipes to help you feel your best</p>
                             <span>Address:</span>
                             <p>16/5 Mai Xuan Thuong Q Binh Thanh</p>
-                        </div>
-                        <div>
-                            <span>Address:</span>
-                            <p>16/5 Mai Xuan Thuong Q Binh Thanh</p>
-                        </div>
-                        <div>
-                            <span>Address:</span>
-                            <p>16/5 Mai Xuan Thuong Q Binh Thanh</p>
-                        </div>
                     </div>
                     <div class="about support">
                         <h2>About Us</h2>

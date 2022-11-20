@@ -1,5 +1,5 @@
 <?php 
-                        session_start();
+                        // session_start();
                         if(isset($_SESSION['user'])==""){
                             header('location:quanly.php?page_layout=login');
                         }
@@ -59,11 +59,11 @@
     <div class="container">
 
         <form method="POST" action="">
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="id">id</label>
                 <input type="text" name="id" class="form-control" placeholder="nhap id" required value="<?php echo $row_up['id'];?>">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="tenmonan">ten mon an</label>
                 <input name="tenmonan" class="form-control" placeholder="nhap ten san pham" required value="<?php echo $row_up['tenmonan'];?>">

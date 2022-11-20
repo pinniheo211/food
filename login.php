@@ -9,7 +9,8 @@
             if(is_array($row)){
                 $_SESSION['user'] = $row['user'];
                 $_SESSION['pass'] = $row['pass'];
-
+                $_SESSION['role'] = $row['role'];
+                $_SESSION['name'] = $row['name'];
             }
             // else if(isset($_SESSION['user']) && $row['role']==1){
             //     header('location:quanly.php?page_layout=danhsach');
@@ -28,6 +29,7 @@
         if(isset($_SESSION['user'])){
             header("location:quanly.php?page_layout=index");
         }
+        
 
         
 
