@@ -1,4 +1,10 @@
-
+<?php 
+                        session_start();
+                        if(isset($_SESSION['user'])==""){
+                            header('location:quanly.php?page_layout=login');
+                        }
+                        $_SESSION['user'];
+                    ?>
 
 <!DOCTYPE html>
 <html lang="en">

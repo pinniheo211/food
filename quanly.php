@@ -23,6 +23,7 @@ require_once 'config/conn.php'?>
         if(isset($_GET['page_layout'])){
             switch ($_GET['page_layout']){
                 case 'danhsach':
+
                     require_once 'danhsach.php';
                     break;
 
@@ -41,13 +42,17 @@ require_once 'config/conn.php'?>
                     require_once 'shopping.php';
                     break;
                 case 'index':
-                    require_once 'index.php';
-                    break;
+ 
+                        require_once 'index.php';
+                        break;
                 case 'login':
                     require_once 'login.php';
                     break;
                 case 'dangky';
                     require_once 'dangky.php';
+                    break;
+                case 'logout':
+                    require_once 'logout.php';
                     break;
                 default:
                     require_once 'login.php';

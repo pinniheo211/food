@@ -1,4 +1,10 @@
-
+<?php 
+                        session_start();
+                        if(isset($_SESSION['user'])==""){
+                            header('location:quanly.php?page_layout=login');
+                        }
+                        $_SESSION['user'];
+                    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +43,7 @@
             // $query = mysqli_query($conn,$sql);
             // header('location:quanly.php?page_layout=danhsach');
              
-            if($conn -> query("UPDATE `monan` SET `tenmonan` = '$tenmonan', `mota` = '$mota' , `tien` = '$tien' , `hinhanh` = '$hinhanh' WHERE `monan`.`id` = $id_up" )){
+            if($conn -> query("UPDATE `monan` SET `tenmonan` = '$tenmonan', `mota` = '$mota' , `tien` = '$tien' , `hinhanh` = '$hinhanh' WHERE `monan`.`id` = '$id_up'" )){
                 echo "<script>alert('them thanh cong !')</script>";
                 header('location:quanly.php?page_layout=danhsach');
 

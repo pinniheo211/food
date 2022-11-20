@@ -5,8 +5,9 @@
 
 
 .form-log{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    width:500px;
+    height: auto;
+    margin:0 auto;
+    background-color:aqua;
 
 }

@@ -1,3 +1,8 @@
+<?php
+
+require_once 'config/conn.php'?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +35,21 @@
                     <li><a href="">Page</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
+            </div>
+            <div class="user d-flex flex-column align-items-center ">
+                        <?php
+                            session_start();
+                            if(isset($_SESSION['user'])==""){
+                                header("location:quanly.php?page_layout=login");
+                            }
+                        ?>
+                        <h6 class="text-uppercase">Xin chao : <?php echo $_SESSION['user']; ?></h6>
+
+                
+
+
+                
+                <a class="btn btn-danger btn-sm" href="quanly.php?page_layout=logout"> Dang xuat</a>
             </div>
             <i class="fa-solid fa-bars"></i>
         </div>

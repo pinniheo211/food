@@ -13,7 +13,7 @@ session_start();
                 die();
             }
 
-                $sql = "SELECT * FROM `tbl_user` WHERE `name`='$name'";
+                $sql = "SELECT * FROM `tbl_user` WHERE `user`='$user'";
                 $old = mysqli_query($conn,$sql);
 
             
@@ -40,33 +40,47 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./login.css">
     <title>dang ky tai khoan</title>
+    <style>
+        .form-login input[type="text"],
+        .form-login input[type="password"]{
+            display:block;
+            margin-left:40px;
+            margin-bottom:10px;
+        }
+        .btn{
+            margin-left: calc(50% - 44px );
+
+        }
+    </style>
 </head>
 <body>
 <body>
-    <div class="main">
-        <h2>sign in </h2>
-        <?php 
-        if(isset($_SESSION['thongbao'])){
-            echo $_SESSION['thongbao'];
-        };
-        
-        
-        ?>
-        <div class="form-login">
-
-            <form action="" method="POST">
-                <label for="name">Ten nguoi dung</label>
-                <input type="text" name="name" id="" required>
-                <label for="name_user">Ten dang nhap</label>
-                <input type="text" name="name_user" id="" required>
-                <label for="name">email</label>
-                <input type="text" name="email" id="" required>
-                <label for="pass">Mat khau</label>
-                <input type="password" name ="pass" required>
-                <label for="repass">nhap lai mat khau</label>
-                <input type="password" name ="repass" required>
-                <input type="submit" name="dangky">
-            </form>
+    <div class="container d-flex justify-content-center pt-5">
+        <div  class="form-log p-5 rounded" style="width:400px;background-color:aquamarine;">
+            <h2 class="text-center">dangky</h2>
+            <?php 
+            if(isset($_SESSION['thongbao'])){
+                echo $_SESSION['thongbao'];
+            };
+            
+            
+            ?>
+            <div class="form-login">
+    
+                <form action="" method="POST">
+                    <label class="form-label mb-3" for="name">Ten nguoi dung</label>
+                    <input type="text" name="name" id="" required>
+                    <label class="form-label mb-3" for="name_user">Ten dang nhap</label>
+                    <input type="text" name="name_user" id="" required>
+                    <label class="form-label mb-3" for="name">email</label>
+                    <input type="text" name="email" id="" required>
+                    <label class="form-label mb-3" for="pass">Mat khau</label>
+                    <input type="password" name ="pass" required>
+                    <label class="form-label mb-3" for="repass">nhap lai mat khau</label>
+                    <input type="password" name ="repass" required>
+                    <input class="btn btn-primary mt-5 mt-x-auto" type="submit" name="dangky">
+                </form>
+            </div>
         </div>
     </div>
 </body>
