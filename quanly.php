@@ -68,7 +68,7 @@ require_once 'config/conn.php'?>
                     require_once 'dangky.php';
                     break;
                 case 'logout':
-                    require_once 'logout.php';
+                    require_once 'logout.html';
                     break;
                 default:
                     require_once 'login.php';
