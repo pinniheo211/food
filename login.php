@@ -85,14 +85,14 @@
             <div class="form-login ">
     
                 <form action="" method="POST">
-                    <label class="form-label mb-3" for="user">Ten dang nhap</label>
+                    <label class="form-label mb-3" for="user">Tên đăng nhập</label>
                     <input class="form-control mb-3" type="text" name="user" id="">
-                    <label class="form-label mb-3" for="pass">Mat khau</label>
+                    <label class="form-label mb-3" for="pass">Mật khẩu</label>
                     <input class="form-control mb-3" type="password" name ="pass">
                     <div class="form text-center d-flex justify-content-center">
 
-                        <input class="mr-4 btn btn-primary" type="submit" name="dangnhap" value="dang nhap">
-                        <input class="btn btn-primary" type="submit" name="dangky" value="dang ky">
+                        <input class="mr-4 btn btn-warning" type="submit" name="dangnhap" value="Đăng nhập">
+                        <input class="btn btn-warning" type="submit" name="dangky" value="Đăng ký">
                     </div>
                 </form>
             </div>

@@ -124,7 +124,7 @@ require_once 'config/conn.php';
                 while($row = mysqli_fetch_assoc($query)){?>
 
                     <div style="width:300px;" class="item">
-                        <img style="height:198px;width:100%; margin-bottom: 30px;" src="shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <img style="height:198px;width:100%; margin-bottom: 30px;" src="./shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
                         <h3><?php echo $row['tenmonan']; ?></h3>
                         <p ><?php echo $row['mota']; ?></p>
                         <i class="fa-solid fa-star"></i>
