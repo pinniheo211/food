@@ -86,10 +86,38 @@ require_once 'config/conn.php';
         height: 20px;
     }
 
+    .popup{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width: 400px;
+        padding: 30px 30px;
+        background-color:antiquewhite;
+        border-radius:10px;
+        display:none;
+    }
+    
+
 </style>
 </head>
 <body>
     <div class="wrapper">
+        <div class="popup" id="popup">
+            <h2>Món ăn đã chọn</h2>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="text-center">
+
+                <button onclick="close()" type="submit" class="btn btn-primary">Đặt món </button>
+            </div>
+        </div>
     <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
         <div class="menu-bar" id='home'>
             <div class="menu-bar-list">
@@ -133,7 +161,7 @@ require_once 'config/conn.php';
                 while($row = mysqli_fetch_assoc($query)){?>
 
                     <div style="width:400px;" class="item">
-                        <img style="height:auto;;width:100%; margin-bottom: 30px;" src="./shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
+                        <img style="height:auto;width:100%; margin-bottom: 30px;" src="./shopping_img/<?php echo $row['hinhanh'] ?>" alt="">
                         <h3><?php echo $row['tenmonan']; ?></h3>
                         <p ><?php echo $row['mota']; ?></p>
                         <i class="fa-solid fa-star"></i>
@@ -141,7 +169,7 @@ require_once 'config/conn.php';
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <p><?php echo $row ['tien']; ?> VND</p>
-                        <a  class="btn btn-warning my-3 px-4"  href="">Mua</a>
+                        <button onclick="open()" class="btn btn-warning my-3 px-4" >Mua</button>
                     </div>
                     <!-- <div class="item">
                         <img style="width:100%;" src="" alt="">
@@ -233,10 +261,10 @@ require_once 'config/conn.php';
         
         </div>
         <div class="row">
-            <div class="footer-title"><h2>CONTRACT INFO</h2></div>
+            <div class="footer-title"><h2>CONTACT INFO</h2></div>
            <div class="text">
             <i class="fa-solid fa-location-dot">  LOCATION</i>
-            <p>16/5 Mai Xuân Thương , Phường 11 , Quận Bình Thạnh , TP Hồ Chí Minh</p>
+            <p>16/5 Mai Xuân Thưởng , Phường 11 , Quận Bình Thạnh , TP Hồ Chí Minh</p>
             <i class="fa-solid fa-envelope">  EMAIL US</i>
             <p>support@gmail.com</p>
             <i class="fa-solid fa-headphones">  CALL US</i>
@@ -262,7 +290,16 @@ require_once 'config/conn.php';
         </div>
         
     </div>
-    
+    <script>
+        ;
+        function open(){
+            document.getElementById("popup").style.display="block";
+        }
+        function close(){
+            document.getElementById("popup").style.display="none";
+            
+        }
+    </script>
 </body>
 </html>
 
