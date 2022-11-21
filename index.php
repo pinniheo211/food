@@ -44,7 +44,7 @@ require_once 'config/conn.php'?>
 
     .list-items img{
         width: 242px;
-    height: 275px;
+        height: 260px;
         object-fit: center;
     }
 
@@ -127,7 +127,7 @@ require_once 'config/conn.php'?>
             <!-- body1 -->
             <div class="body1">
                 <div class="img" style="z-index:1;">
-                    <img src="./img/about1.png" alt="">
+                    <img src="./shopping_img/6.png" style="width:500px;"  alt="">
                 </div>
                 <div class="farm">
                     <h1>The best choice for you</h1>
@@ -255,7 +255,7 @@ require_once 'config/conn.php'?>
                             </div>
                         </li>
                         <li>
-                            <img class="rounded" src="./img/team1.jpeg" alt="">
+                            <img class="rounded" src="./img/quan.jpg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
                                 <p>Võ Duy Minh Quân</p>
