@@ -8,7 +8,7 @@ session_start();
             $repass = $_POST["repass"];
             $user = $_POST["name_user"];
             if($pass != $repass){
-                $_SESSION['thongbao'] = "nhap sai mat khau nhap lai";
+                $_SESSION['thongbao'] = "Nhập sai mật khẩu vui lòng nhập lại";
                 header("Location:quanly.php?page_layout=dangky");
                 die();
             }
@@ -19,7 +19,7 @@ session_start();
             
             
             if(mysqli_num_rows($old)>0){
-                $_SESSION['thongbao'] = "ten tai khoan da ton tai";
+                $_SESSION['thongbao'] = "Tên tài khoản đã tồn tại";
                 header("Location:quanly.php?page_layout=dangky");
                 die();
             }
@@ -39,25 +39,33 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./login.css">
-    <title>dang ky tai khoan</title>
+    <title>Đăng ký tài khoản</title>
     <style>
         .form-login input[type="text"],
-        .form-login input[type="password"]{
+        .form-login input[type="password"]{ 
             display:block;
-            margin-left:40px;
+            margin-left:60px;
             margin-bottom:10px;
+            border-radius:5px;
+            border:1px solid #ccc;    
         }
         .btn{
-            margin-left: calc(50% - 44px );
+            margin-left: calc(50% - 50px );
 
+        }
+        body{
+            background-image:url('./img/bg10.jpeg');
+        }
+        .form-log{
+            background-color:white;
         }
     </style>
 </head>
 <body>
 <body>
     <div class="container d-flex justify-content-center pt-5">
-        <div  class="form-log p-5 rounded" style="width:400px;background-color:aquamarine;">
-            <h2 class="text-center">dangky</h2>
+        <div  class="form-log p-5" style="width:400px; border-radius: 50px 50px;border:none; ">
+            <h2 class="text-center">Đăng ký</h2>
             <?php 
             if(isset($_SESSION['thongbao'])){
                 echo $_SESSION['thongbao'];
@@ -68,17 +76,17 @@ session_start();
             <div class="form-login">
     
                 <form action="" method="POST">
-                    <label class="form-label mb-3" for="name">Ten nguoi dung</label>
-                    <input type="text" name="name" id="" required>
-                    <label class="form-label mb-3" for="name_user">Ten dang nhap</label>
-                    <input type="text" name="name_user" id="" required>
-                    <label class="form-label mb-3" for="name">email</label>
-                    <input type="text" name="email" id="" required>
-                    <label class="form-label mb-3" for="pass">Mat khau</label>
-                    <input type="password" name ="pass" required>
-                    <label class="form-label mb-3" for="repass">nhap lai mat khau</label>
+                    <label class="form-label mb-3" for="name">Tên người dùng</label>
+                    <input  type="text" name="name" id="" required>
+                    <label class="form-label mb-3" for="name_user">Tên đăng nhập</label>
+                    <input  type="text" name="name_user" id="" required>
+                    <label class="form-label mb-3" for="name">Email</label>
+                    <input  type="text" name="email" id="" required>
+                    <label class="form-label mb-3" for="pass">Mật khẩu</label>
+                    <input  type="password" name ="pass" required>
+                    <label class="form-label mb-3" for="repass">Nhập lại mật khẩu</label>
                     <input type="password" name ="repass" required>
-                    <input class="btn btn-primary mt-5 mt-x-auto" type="submit" name="dangky">
+                    <input class="btn btn-primary mt-5 mt-x-auto px-5" type="submit" name="dangky">
                 </form>
             </div>
         </div>
