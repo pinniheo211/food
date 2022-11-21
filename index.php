@@ -42,6 +42,19 @@ require_once 'config/conn.php'?>
         box-shadow: 0 -0.5rem 1.5rem #000;
     }
 
+    .list-items img{
+        width: 242px;
+    height: 275px;
+        object-fit: center;
+    }
+
+    .list-items{
+        background-color:#fff;
+    }
+
+    .contact-logo{
+        width:100%;
+    }
 </style>
 </head>
 <body>
@@ -180,40 +193,40 @@ require_once 'config/conn.php'?>
                 
                 <div class="list-items-info">
                     <div class="list-items">
-                        <img src="./shopping_img/" alt="">
-                        <h4>NATURE WATERMELON</h4>
+                        <img src="./shopping_img/zyro-image (1).png" alt="">
+                        <h4>tangerine salad</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>43000VND</p>
+                        <p>30000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./shopping_img/" alt="">
-                        <h4>NATURE WATERMELON</h4>
+                        <img src="./shopping_img/zyro-image (2).png" alt="">
+                        <h4>vegetable salad</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>43000VND</p>
+                        <p>40000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./shopping_img/" alt="">
-                        <h4>NATURE WATERMELON</h4>
+                        <img src="./shopping_img/zyro-image (3).png" alt="">
+                        <h4>tofu salad</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>43000VND</p>
+                        <p>45000VND</p>
                     </div>
                     <div class="list-items">
-                        <img src="./shopping_img/" alt="">
-                        <h4>NATURE WATERMELON</h4>
+                        <img src="./shopping_img/zyro-image (4).png" alt="">
+                        <h4>tropical fruits cereal</h4>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>    
-                        <p>43000VND</p>
+                        <p>55000VND</p>
                     </div>
                 </div>
                 <a class="btn-view" href="quanly.php?page_layout=shopping">VIEW ALL</a>
@@ -226,7 +239,7 @@ require_once 'config/conn.php'?>
                 <div class="member-list">
                     <ul>
                         <li>
-                            <img class="rounded" src="./img/trancuong.jpg" alt="">
+                            <img class="rounded" src="./img/cuong.jpg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
                                 <p>Trần Chí Cường</p>
@@ -234,7 +247,7 @@ require_once 'config/conn.php'?>
                             </div>
                         </li>
                         <li>
-                            <img class="rounded" src="./img/khanh.jpg" alt="">
+                            <img class="rounded" src="./img/khanhnguyen.jpg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
                                 <p>Nguyễn Bảo Khanh</p>
@@ -254,8 +267,8 @@ require_once 'config/conn.php'?>
             </div>
 
             <!-- footer -->
-            <div class="footer" id="footer">
-                <div class="contact-logo">
+            <div class="footer d-flex justify-content-between px-5 flex-wrap" id="footer">
+                <div class="contact-logo ">
                     <div class="logo">
                         <img src="./img/logo.png" alt="">
                     </div>

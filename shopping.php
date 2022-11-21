@@ -77,6 +77,17 @@ require_once 'config/conn.php';
         color:#fff;
     }
 
+    .item h3{
+        height: 60px;
+    }
+
+    .item i{
+        height: 10px;
+    }
+    .item p{
+        height: 20px;
+    }
+
 </style>
 </head>
 <body>
