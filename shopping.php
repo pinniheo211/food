@@ -33,6 +33,9 @@ require_once 'config/conn.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="shopping.css">
 <style>
+        html {
+  scroll-behavior: smooth;
+}
     .item p{
         height:11px;
     }
@@ -61,12 +64,25 @@ require_once 'config/conn.php';
     .menu-bar{
         background-image: url('img/bg5.jpeg');
     }
+    .up{
+        padding:10px 15px;
+        border-radius:100%;
+        background-color:#28a745;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        z-index: 3;
+    }
+    .up i{
+        color:#fff;
+    }
 
 </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="menu-bar" >
+    <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        <div class="menu-bar" id='home'>
             <div class="menu-bar-list">
                 <div class="icon">
                     <img src="./img/logo.png" alt="">
