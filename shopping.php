@@ -114,7 +114,7 @@ require_once 'config/conn.php';
             </div>
             <div class="title">
                 <h1>Shop Page</h1>
-                <p><a href="">Home</a> <span>SHOP PAGE</span> </p>
+                <p><a href="quanly.php?page_layout=index">Home</a> <span>SHOP PAGE</span> </p>
     
             </div>
            
