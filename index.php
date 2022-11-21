@@ -234,7 +234,7 @@ require_once 'config/conn.php'?>
                             </div>
                         </li>
                         <li>
-                            <img class="rounded" src="./img/team1.jpeg" alt="">
+                            <img class="rounded" src="./img/khanh.jpg" alt="">
                             <div class="inf-mem">
                                 <h1>Nhom BATL</h1>
                                 <p>Nguyễn Bảo Khanh</p>

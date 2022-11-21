@@ -91,6 +91,15 @@ require_once 'config/conn.php';
                     <ul>
                         <li><a href="quanly.php?page_layout=index">HOME</a></li>
                         <li><a href="#footer">CONTACT</a></li>
+                        <li><a href="quanly.php?page_layout=danhsach"><?php
+                    if($_SESSION['role']==1){
+                        echo "MANAGERMENT";
+                    }
+                    else{
+                        echo "";
+
+                    }
+                    ?></a></li>
                     </ul>
                 </div>
             </div>
