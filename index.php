@@ -38,14 +38,16 @@ require_once 'config/conn.php'?>
     .up i{
         color:#fff;
     }
- 
+    .menubar{
+        box-shadow: 0 -0.5rem 1.5rem #000;
+    }
 
 </style>
 </head>
 <body>
     <div class="wrapper">
         <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
-        <div class="menubar" id="home">
+        <div class="menubar fixed-top ">
             <div class="logo">
                 <a href=""><img src="./img/logo.png" alt=""></a>
             </div>
@@ -98,7 +100,7 @@ require_once 'config/conn.php'?>
         </div>
 
         <!-- slider -->
-        <div class="slider">
+        <div class="slider" id="home">
             <img src="./img/sl1 (1).png" alt="">
             <div class="desc">
                 <h1>Build Your Health Eating</h1>
@@ -214,7 +216,7 @@ require_once 'config/conn.php'?>
                         <p>43000VND</p>
                     </div>
                 </div>
-                <a class="btn-view" href="">VIEW ALL</a>
+                <a class="btn-view" href="quanly.php?page_layout=shopping">VIEW ALL</a>
                 
             </div>
             <!-- body 4 -->

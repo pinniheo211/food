@@ -58,11 +58,15 @@ require_once 'config/conn.php';
         width:61%;
     }
 
+    .menu-bar{
+        background-image: url('img/bg5.jpeg');
+    }
+
 </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="menu-bar">
+        <div class="menu-bar" >
             <div class="menu-bar-list">
                 <div class="icon">
                     <img src="./img/logo.png" alt="">
@@ -202,7 +206,7 @@ require_once 'config/conn.php';
             <i class="fa-solid fa-envelope">  EMAIL US</i>
             <p>support@gmail.com</p>
             <i class="fa-solid fa-headphones">  CALL US</i>
-            <p>0901328277</p>
+            <p>002- 01008431112</p>
             
            </div>
         </div>
