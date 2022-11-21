@@ -59,7 +59,7 @@ require_once 'config/conn.php'?>
                     break;
                 case 'index':
  
-                        require_once 'index.html';
+                        require_once 'index.php';
                         break;
                 case 'login':
                     require_once 'login.php';
