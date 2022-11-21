@@ -115,7 +115,7 @@ require_once 'config/conn.php';
             </div>
             <div class="text-center">
 
-                <button onclick="close()" type="submit" class="btn btn-primary">Đặt món </button>
+                <button type="button" onclick="close()"  class="btn btn-primary">Đặt món </button>
             </div>
         </div>
     <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
@@ -169,7 +169,7 @@ require_once 'config/conn.php';
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <p><?php echo $row ['tien']; ?> VND</p>
-                        <button onclick="open()" class="btn btn-warning my-3 px-4" >Mua</button>
+                        <button type="button"  class="btn btn-warning my-3 px-4" >Mua</button>
                     </div>
                     <!-- <div class="item">
                         <img style="width:100%;" src="" alt="">
@@ -291,7 +291,7 @@ require_once 'config/conn.php';
         
     </div>
     <script>
-        ;
+        
         function open(){
             document.getElementById("popup").style.display="block";
         }
