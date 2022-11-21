@@ -47,18 +47,16 @@ require_once 'config/conn.php';
     .list-items{
         margin-top:40px;
     }
-    .wrapper{
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-    }
+
     #footer{
-        scroll-snap-align: center;
         height:100%;
+        display:flex;
+        justify-content: space-between;
+        padding:20px 60px;
     }
 
     .row{
-        width:61%;
+        width:21%;
     }
 
     .menu-bar{
