@@ -8,6 +8,7 @@
     width:500px;
     height: auto;
     margin:0 auto;
-    background-color:aqua;
+    background-image: url(/food/img/bg9.jpeg); 
+    border: 1px solid black;
 
 }
