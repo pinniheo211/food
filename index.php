@@ -62,7 +62,7 @@ require_once 'config/conn.php'?>
         <a class="up" href="#home"><i class="fa-solid fa-arrow-up"></i></a>
         <div class="menubar fixed-top ">
             <div class="logo">
-                <a href=""><img src="./img/logo.png" alt=""></a>
+                <a href=""><img src="./img/image-from-rawpixel-id-2046191-original.png" alt="" style="width:160px;"></a>
             </div>
 
             <div class="menu-list">
@@ -270,7 +270,7 @@ require_once 'config/conn.php'?>
             <div class="footer d-flex justify-content-between px-5 flex-wrap" id="footer">
                 <div class="contact-logo ">
                     <div class="logo">
-                        <img src="./img/logo.png" alt="">
+                        <img src="./img/image-from-rawpixel-id-2046191-original.png" style="width:160px;" alt="">
                     </div>
                     <div class="social-list">
                         <ul>

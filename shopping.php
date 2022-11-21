@@ -122,7 +122,7 @@ require_once 'config/conn.php';
         <div class="menu-bar" id='home'>
             <div class="menu-bar-list">
                 <div class="icon">
-                    <img src="./img/logo.png" alt="">
+                    <img src="./img/image-from-rawpixel-id-2046191-original.png" style="width:90px;" alt="">
                 </div>
                 <div class="menu-list">
                     <ul>
@@ -252,7 +252,7 @@ require_once 'config/conn.php';
     <div id="footer">
         <div class="row">
             <div class="footer-title">
-                <img src="https://shtheme.info/demosd/orgafe/wp-content/uploads/2019/04/logo.png" alt="">
+                <img src="./img/image-from-rawpixel-id-2046191-original.png" style="width: 150px; margin-top: -50px;" alt="">
             </div>
             <div class="text">
                 <P>If you are searching for great tasting, healthy meal plans in Saigon, we have a selection of dishes that will keep you energetic during the week. Our extensive menu is good for about 45 days without repeating a combination.
