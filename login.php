@@ -70,11 +70,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-admin</title>
+    <style>
+        body{
+            background-image:url('./img/bg10.jpeg');
+        }
+        .form-log{
+            background-color: white;
+        }
+    </style>
         
 </head>
 <body>
     <div class="container d-flex justify-content-center pt-5">
-        <div  class="form-log p-5 rounded" style="width:400px;background-color:aquamarine;">
+        <div  class="form-log p-5 " style="width:400px; border-radius: 50px 50px">
             <h2 class="text-center">Login </h2>
             <?php 
                 if(isset($_SESSION['thongbao'])){
@@ -83,7 +91,7 @@
                 }
             ?>
             <div class="form-login ">
-    
+                
                 <form action="" method="POST">
                     <label class="form-label mb-3" for="user">Tên đăng nhập</label>
                     <input class="form-control mb-3" type="text" name="user" id="">
@@ -91,8 +99,8 @@
                     <input class="form-control mb-3" type="password" name ="pass">
                     <div class="form text-center d-flex justify-content-center">
 
-                        <input class="mr-4 btn btn-warning" type="submit" name="dangnhap" value="Đăng nhập">
-                        <input class="btn btn-warning" type="submit" name="dangky" value="Đăng ký">
+                        <input class="mr-4 btn btn-outline-info" type="submit" name="dangnhap" value="Đăng nhập">
+                        <input class="btn btn-outline-info" type="submit" name="dangky" value="Đăng ký">
                     </div>
                 </form>
             </div>
