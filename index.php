@@ -83,7 +83,7 @@ require_once 'config/conn.php'?>
                         ?>
                     <li><a href="quanly.php?page_layout=danhsach"><?php
                     if($_SESSION['role']==1){
-                        echo "management";
+                        echo "Management";
                     }
                     else{
                         echo "";
