@@ -24,7 +24,7 @@ require_once 'config/conn.php'?>
             switch ($_GET['page_layout']){
                 case 'danhsach':
                     session_start();
-                    if($_SESSION['role']==1){
+                    if($_SESSION['role']==1 ){
                         require_once 'danhsach.php';
                     }else{
                         require_once 'error.php';
@@ -59,7 +59,7 @@ require_once 'config/conn.php'?>
                     break;
                 case 'index':
  
-                        require_once 'index.php';
+                        require_once 'index.html';
                         break;
                 case 'login':
                     require_once 'login.php';
